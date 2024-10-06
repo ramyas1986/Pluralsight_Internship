@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Car Rental</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <h1>ACME Car Rental</h1>
+    <p>Pickup date: <input type="date" id="pickupDate" /></p>
+    <p>Number of Days: <input type="number" id="NumberOfDays" /></p>
+    <p>Options</p>
+    <p><input type="checkbox" id="tollTagChkbox" name="electronicTollTag" value="amount">
+        <label for="tollTagChkbox">Electronic Toll Tag (&#36 3.95/day)</label><br>
+    </p>
+    <p><input type="checkbox" id="gpsChkbox" name="GPS" value="amountperday">
+        <label for="gpsChkbox">GPS (&#36 2.95/day)</label><br>
+    </p>
+    <p><input type="checkbox" id="roadsideChkbox" name="roadsideAssistance" value="amount">
+        <label for="roadsideChkbox">Roadside Assistance (&#36 2.95/day)</label><br>
+    </p>
+    <p>Under 25</p>
+    <p><input type="radio" id="noRadioBtn" name="under25" value="no">
+        <label for="no">No</label>
+        <input type="radio" id="yesRadioBtn" name="under25" value="yes">
+        <label for="yes">Yes</label><br>
+    </p>
+
+    <p><input type="button" id="EstimateTotalCost" value="EstimateTotalCost" /></p>
+<table>
+    <tr>
+        <td class="lbl">Car Rental: </td>
+        <td class = "prce" id="carRental">&#36 xxx.xx</td>
+    </tr>
+    <tr>
+        <td class="lbl">Options: </td>
+        <td class = "prce" id="Options">&#36 xx.xx</td>
+    </tr>
+    <tr>
+        <td class="lbl">Under 25 surcharge: </td>
+        <td class = "prce" id="under25surchage">&#36 xx.xx</td>
+    </tr>
+    <tr>
+        <td class="lbl">Total Due: </td>
+        <td class = "prce" id="totaldue">&#36 xxx.xx</td>
+    </tr>
+</table>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/decimal.js/7.2.3/decimal.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>

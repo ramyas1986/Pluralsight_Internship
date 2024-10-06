@@ -1,0 +1,67 @@
+.add-book-container {
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.imgcss {
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+form {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-label {
+  font-weight: bold;
+}
+
+.add-book-btn {
+  /* display: flex; */
+  align-items: center;
+}
+
+.text-danger {
+  color: #dc3545;
+  margin-top: 0.25rem;
+  font-size: 80%;
+}
+
+/* .form-select, .form-control {
+  width: calc(50% - 0.5rem);
+} */
+
+.d-flex .btn {
+  margin-left: 0.5rem;
+}
+
+/* .btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+  border-color: #6c757d;
+} */
+
+.mx-2 {
+  margin-left: 0.5rem !important;
+  margin-right: 0.5rem !important;
+}
+
+.customDatePickerWidth,
+.customDatePickerWidth>div.react-datepicker-wrapper,
+.customDatePickerWidth>div>div.react-datepicker__input-container .customDatePickerWidth>div>div.react-datepicker__input-container input {
+  width: 100%;
+}

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>All Courses Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="css/styles.css">
+        <style>
+            .fixed-element {
+            position: fixed;
+            top: 10px;
+            right: 30px;
+            }
+        </style>
+</head>
+
+
+<body>
+    <a href=newcourse.html><button class="fixed-element btn btn-secondary" type="button">New Course</button></a>
+    <div class="container">
+        
+        <div class="container">
+            <table class="table table-striped mt-5" id="usersTable">
+                <th scope="col">Department</th>
+                <th scope="col">Course Number</th>
+                <th scope="col">Course Name</th>
+                <th scope="col">Details</th>
+                <th scope="col">Delete</th>
+                </tr>
+                </thead>
+            </table>
+        </div>
+    </div>
+    
+</body>
+<script>
+    // fetches all users and places their names and emails in a table
+    try {
+
+        fetch("http://localhost:8081/api/courses")
+            .then(response => {
+                if (response.status === 200)
+                    return response.json();
+                else return "";
+            })
+
+            .then(data => { displayUsersData(data) });
+    }
+    catch (error) {
+        // TypeError: Failed to fetch
+        console.log('There was an error', error);
+        errorDisplay();
+    }
+
+        function errorDisplay() {
+            let table = document.getElementById("usersTable");
+            let row = table.insertRow(-1);
+            let cell1 = row.insertCell(0);
+            cell1.innerHTML = "Run node server locally: node server.js";
+            console.error(cell1.innerHTML);
+            return;
+
+        }
+    function displayUsersData(data) {
+        if (data === "") {
+            errorDisplay();
+        }
+        let table = document.getElementById("usersTable");
+
+        for (let i = 0; i < data.length; i++) {
+            let row = table.insertRow(-1);
+            let cell1 = row.insertCell(0);
+            let cell2 = row.insertCell(1);
+            let cell3 = row.insertCell(2);
+            const detailsCell = row.insertCell(3);
+            const deleteCell = row.insertCell(4);
+            cell1.innerHTML = data[i].dept;
+            cell2.innerHTML = data[i].courseNum;
+            cell3.innerHTML = data[i].courseName;
+
+
+           
+            let anchor1 = document.createElement("a");
+            anchor1.href = `details.html?cid=${data[i].id}`;
+            anchor1.text = "See details";  
+            detailsCell.appendChild(anchor1);
+
+            let anchor2 = document.createElement("a");
+            anchor2.href = `confirm-delete.html?cid=${data[i].id}`;
+            anchor2.text = "Delete";  
+            deleteCell.appendChild(anchor2);
+
+        }
+    }
+
+</script>
+
+</html>

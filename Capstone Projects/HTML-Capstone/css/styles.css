@@ -1,0 +1,53 @@
+.text-justify {
+  text-align: justify !important;
+}
+
+.container {
+  max-width: 960px;
+}
+
+.banner {
+  background: url('../images/Crazy-No-Bake-Cookies1.jpg') no-repeat fixed;
+  box-shadow: inset 0 0 0 100vw rgba(0, 0, 0, 0.1);
+  height: 40vh;
+  background-size: cover
+}
+
+.image_size {
+    width: 50%; /* Set the desired width */
+    height: 50%; /* Maintain aspect ratio */
+    object-fit: contain;
+}
+
+table {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+th,
+td {
+  border-width: 3px;
+  border-style: groove;
+  padding: 5px;
+  text-align: center;
+}
+
+body {
+  /*padding-top: 3rem;*/
+  padding-bottom: 3rem;
+  background-color:azure;
+  background-repeat: repeat;
+}
+
+.spacing {
+  padding: 10px;
+
+}
+
+a[href^='mailto']::before {
+  content: '📧 ';
+}
+
+a[href^='tel']::before {
+  content: '📞 ';
+}

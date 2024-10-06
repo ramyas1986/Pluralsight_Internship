@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Home page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</head>
+<body>
+    <p class="m-3">Select a football team</p>
+    <div class="dropdown m-3">
+        <select id="footballTeams">
+            <option value="">Select a team</option>
+        </select>        
+        <button onclick="selectFootballTeam()" class="dropbtn">Submit</button>
+      </div>
+      <p id="selectedFootballTeamMessage"></p>
+    <script src="index.js"></script>
+</body>
+</html>

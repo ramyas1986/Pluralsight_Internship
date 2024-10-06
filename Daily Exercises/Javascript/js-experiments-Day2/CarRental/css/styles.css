@@ -1,0 +1,12 @@
+.lbl {
+    text-align: left;
+}
+
+.prce {
+    text-align: right;
+}
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+}

@@ -1,0 +1,55 @@
+.search-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* Align items to the end of the container */
+  position: fixed; /* Fix the position relative to the viewport */
+  top: 80px; /* Distance from the top */
+  right: 20px; /* Distance from the right */
+  min-width: 400px; /* Adjust min-width as needed */
+  /*width: 100%;  Full width of its parent */
+  max-width: 600px; /* Max width for the search bar */
+  border-radius: 25px; /* Rounded corners */
+  background: #f8f8f8; /* Light background */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  padding: 10px; /* Add padding */
+  z-index: 1000; /* Ensure it's above other content */
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  position: relative;
+}
+
+.search-input {
+  flex: 1;
+  padding: 10px 20px;
+  border: 1px solid #ddd;
+  border-radius: 25px; /* Rounded corners */
+  margin-right: 8px;
+  font-size: 16px; /* Adjust font size */
+}
+
+.icon-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2em;
+  color: #888;
+  position: absolute; /* Position the button absolutely within the input container */
+  right: 10px; /* Align to the right edge of the input container */
+}
+
+.icon-button:hover {
+  color: #555;
+}
+
+.error-message {
+  color: red;
+  margin-top: 8px;
+}
+
+.warning-message {
+  color: orange;
+}

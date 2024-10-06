@@ -1,0 +1,10 @@
+Run the unit test
+
+dotnet test --collect:"XPlat Code Coverage"
+
+
+In the parent folder run "dotnet tool install --global dotnet-reportgenerator-globaltool --version 5.3.8"
+
+
+go to tests folder in command propmt and run
+reportgenerator -reports:TestResults\4cb89c51-367b-4b07-8d77-71eb335aa1cd\coverage.cobertura.xml -targetdir:ReportOutput

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Welcome to Bethany's Pie Shop!</title>
+    <meta name="author" content="New User Account">
+    <meta name="description" content="New user account">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <main>
+        <form action="new-user-account.html" method="POST" enctype="application/x-www-form-urlencoded"></form>
+        <h1>New User Account</h1>
+        <label for="nameField">Your name: </label>
+        <input id="nameField" type="text" name="customerName"><br/><br/>
+        <label for="passwordField">Password: </label>
+        <input id="passwordField" type="text" name="Password"><br/><br/>
+        <label for="passwordField">Confirm Password: </label>
+        <input id="passwordField" type="text" name="Password"><br/><br/>
+
+        How did you hear about us?
+        <label><input type="radio" name="Friend" value="cell">Friend</label>
+        <label><input type="radio" name="Advertisement" value="work">Advertisement</label>
+        <label><input type="radio" name="Email" value="home">Email</label>
+        <br/><br/>
+        
+            <input type="checkbox" name="AgreeToTerms">Agree to terms
+            <br/><br/>
+            <input type="submit" value="Submit">
+            <input type="submit" value="Cancel">
+        </form>
+    </main>
+</body>
+
+</html>
